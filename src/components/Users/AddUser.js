@@ -1,7 +1,9 @@
-import { Axios } from "axios";
+import Axios  from "axios";
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 
 const AddUser = () => {
+  let history = useNavigate();
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -19,6 +21,7 @@ const AddUser = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     await Axios.post("http://localhost:3002/users",user);
+    history("/")
   };
 
   return (
