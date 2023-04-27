@@ -4,7 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditUser = () => {
   let history = useNavigate();
-  //   const {id} = useParams();
+    const {id} = useParams();
+    // alert(id)
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -21,17 +22,17 @@ const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await Axios.post("http://localhost:3002/users", user);
+    await Axios.put("http://localhost:3002/users", user);
     history("/");
   };
 
-  //   const loaduser = async()=>{
-  //     const useresult = await Axios.get(`http://localhost:3002/users/${id}`);
-  //     setUser(useresult.data)
-  // }
-  //     useEffect(()=>{
-  //         loaduser()
-  //     },[])
+    const loaduser = async()=>{
+      const useresult = await Axios.get(`http://localhost:3002/users/${id}`);
+      setUser(useresult.data)5
+  }
+      useEffect(()=>{
+          loaduser()
+      },[])
   return (
     <div className="container my-4">
       <div className=" w-75 mx-auto shadow p-5">

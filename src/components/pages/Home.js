@@ -10,7 +10,7 @@ const Home= ()=> {
 
   const loadUsers = async ()=>{
     const result = await Axios.get("http://localhost:3002/users")
-    setUser(result.data)
+    setUser(result.data.reverse())
     // console.log(result)
   }
 
@@ -38,7 +38,7 @@ const Home= ()=> {
                 <td>{user.email}</td>
                 <td>
                   <Link className='btn btn-primary me-3'>View</Link>
-                  <Link className='btn btn-outline-primary me-3'>Edit</Link>
+                  <Link to={`/users/edit/${user.id}`} className='btn btn-outline-primary me-3'>Edit</Link>
                   <Link className='btn btn-danger'>Delete</Link>
                 </td>
               </tr>
