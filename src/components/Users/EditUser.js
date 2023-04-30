@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EditUser = () => {
+  
   let history = useNavigate();
     const {id} = useParams();
     // alert(id)
@@ -22,13 +23,13 @@ const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await Axios.put("http://localhost:3002/users", user);
+    await Axios.put(`http://localhost:3002/users/${id}`, user);
     history("/");
   };
 
     const loaduser = async()=>{
       const useresult = await Axios.get(`http://localhost:3002/users/${id}`);
-      setUser(useresult.data)5
+      setUser(useresult.data)
   }
       useEffect(()=>{
           loaduser()
@@ -95,8 +96,8 @@ const EditUser = () => {
               value={website}
             />
           </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
+          <button type="submit" class="btn btn-success">
+            Update User
           </button>
         </form>
       </div>

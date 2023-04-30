@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import NotFound from './components/pages/NotFound';
 import AddUser from './components/Users/AddUser';
 import EditUser from './components/Users/EditUser';
+import ViewUser from './components/Users/ViewUser';
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />}></Route>
             <Route exact path="/users/add" element={<AddUser/>}></Route>
             <Route exact path="/users/edit/:id" element={<EditUser/>}></Route>
+            <Route exact path="/users/:id" element={<ViewUser></ViewUser>}></Route>
             <Route element={<NotFound/>}></Route>
           </Routes>
 

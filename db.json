@@ -222,45 +222,13 @@
           "lng": "57.2232"
         }
       },
-      "phone": "024-648-3804",
+      "phone": "9988776655",
       "website": "ambrose.net",
       "company": {
         "name": "Hoeger LLC",
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
-    },
-    {
-      "name": "Satyajit Dandi",
-      "username": "satya",
-      "email": "dandisatyajit@gmail.com",
-      "phone": "9898989889",
-      "website": "hkjDHKJAS",
-      "id": 11
-    },
-    {
-      "name": "Satyajit Dandi",
-      "username": "satya",
-      "email": "dandisatyajit@gmail.com",
-      "phone": "099989898",
-      "website": "askdj",
-      "id": 12
-    },
-    {
-      "name": "ratish",
-      "username": "ratish",
-      "email": "ratish@m.com",
-      "phone": "989898989898",
-      "website": "sdf",
-      "id": 13
-    },
-    {
-      "name": "mehul",
-      "username": "mehul88",
-      "email": "ytdyuwge@m.com",
-      "phone": "9999999999",
-      "website": "hdf",
-      "id": 14
     }
   ]
 }
